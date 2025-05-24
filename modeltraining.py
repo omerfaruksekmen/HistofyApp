@@ -129,3 +129,18 @@ confidence = prediction[0][predicted_index]
 # Tahmin ciktisi
 
 print(f"✅ Tahmin: {predicted_label} (%{confidence * 100:.2f} olasılıkla)")
+
+# Test veri seti ile degerlendirme yapilmasi ve test dogruluk orani
+
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+test_generator = test_datagen.flow_from_directory(
+    '/content/drive/MyDrive/dataset/test',
+    target_size=(224, 224),
+    batch_size=16,
+    class_mode='sparse',
+    shuffle=False
+)
+
+test_loss, test_accuracy = model.evaluate(test_generator)
+print(f"📊 Test Doğruluk Oranı: {test_accuracy:.4f}")
