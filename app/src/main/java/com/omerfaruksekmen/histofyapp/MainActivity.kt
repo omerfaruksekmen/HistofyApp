@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             checkCameraPermissionAndOpenCamera()
         }
 
-        tflite = Interpreter(FileUtil.loadMappedFile(this, "model.tflite"))
+        tflite = Interpreter(FileUtil.loadMappedFile(this, "mobilenetv2_model.tflite"))
         labels = FileUtil.loadLabels(this, "labels.txt")
     }
 
