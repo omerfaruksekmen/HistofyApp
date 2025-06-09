@@ -12,7 +12,7 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sonuç burada görünecek"
+        android:text="The result will appear here."
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginBottom="16dp" />
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#000000"
-        android:text="Galeriden Seç"
+        android:text="Select from Gallery"
         android:textColor="@color/white" />
 
     <Button
@@ -39,14 +39,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#000000"
-        android:text="Kameradan Çek"
+        android:text="Capture from Camera"
         android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/txtInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tanıtım metni burada"
+        android:text="The introductory text is here"
         android:textSize="16sp"
         android:padding="8dp"
         android:visibility="gone" />
@@ -55,14 +55,14 @@
         android:id="@+id/btnMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Haritada Göster"
+        android:text="Show on Map"
         android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Google'da Ara"
+        android:text="Search on Google"
         android:visibility="gone" />
 
 </LinearLayout>

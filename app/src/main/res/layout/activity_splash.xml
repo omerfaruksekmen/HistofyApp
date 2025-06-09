@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="400dp"
-        android:contentDescription="Uygulama Logosu"
-        android:src="@drawable/splashimage" />
+        android:contentDescription="App Logo"
+        android:src="@drawable/welcomescreen" />
 
 </LinearLayout>

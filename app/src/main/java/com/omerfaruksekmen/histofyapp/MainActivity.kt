@@ -53,19 +53,19 @@ class MainActivity : AppCompatActivity() {
 
     private val landmarkData = mapOf(
         "ayasofya" to LandmarkInfo(
-            name = "Ayasofya",
-            description = "Ayasofya, Bizans ve Osmanlı dönemlerine tanıklık etmiş, İstanbul'un en önemli yapılarından biridir.",
-            mapQuery = "Ayasofya Istanbul"
+            name = "Hagia Sophia",
+            description = "Hagia Sophia is one of the most important structures in Istanbul, having witnessed both the Byzantine and Ottoman eras.",
+            mapQuery = "Hagia Sophia Istanbul"
         ),
         "galata_kulesi" to LandmarkInfo(
-            name = "Galata Kulesi",
-            description = "Galata Kulesi, İstanbul'un Beyoğlu semtinde yer alan tarihi bir kuledir ve eşsiz bir manzaraya sahiptir.",
-            mapQuery = "Galata Kulesi"
+            name = "Galata Tower",
+            description = "The Galata Tower is a historic tower located in the Beyoğlu district of Istanbul and offers a unique view.",
+            mapQuery = "Galata Tower"
         ),
         "kiz_kulesi" to LandmarkInfo(
-            name = "Kız Kulesi",
-            description = "Kız Kulesi, İstanbul Boğazı'nda yer alan, efsanelere konu olmuş ikonik bir yapıdır.",
-            mapQuery = "Kız Kulesi"
+            name = "Maidens Tower",
+            description = "The Maiden's Tower is an iconic structure located in the Bosphorus Strait of Istanbul, renowned for its legends.",
+            mapQuery = "Maidens Tower"
         )
     )
 
@@ -134,7 +134,7 @@ class MainActivity : AppCompatActivity() {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "İzin gerekli", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Permission required", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -203,7 +203,7 @@ class MainActivity : AppCompatActivity() {
         val confidenceThreshold = 0.6f
 
         if (confidence < confidenceThreshold || labels[maxIdx] == "diger") {
-            txtResult.text = "Bu görsel tanımlanamadı."
+            txtResult.text = "This image could not be identified."
 
             txtInfo.visibility = View.GONE
             btnMap.visibility = View.GONE
@@ -211,7 +211,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             val result = labels[maxIdx]
             val confidencePercent = confidence * 100
-            txtResult.text = "Tahmin: $result"
+            txtResult.text = "Prediction: $result"
 
             val labelKey = labels[maxIdx]
 
